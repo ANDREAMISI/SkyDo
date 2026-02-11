@@ -1,12 +1,15 @@
+import { FaSearch } from "react-icons/fa";
 function SearchBar({ search, setSearch }) {
   return (
-    <input
-      className="input search"
-      type="text"
-      placeholder="🔎 Rechercher une tâche..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-    />
+    <div className="search-bar">
+      <FaSearch className="search-icon" />
+      <input
+        type="text"
+        placeholder="Rechercher une tâche..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
   );
 }
 

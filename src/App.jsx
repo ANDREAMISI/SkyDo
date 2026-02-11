@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import AddTask from "./pages/AddTask";
 import EditTask from "./pages/EditTask";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 import "./styles.css";
 
 function App() {
@@ -18,12 +20,16 @@ function App() {
   return (
     <BrowserRouter>
       <header className="header">
-        <h2>SkyDO</h2>
+        <div className="logo_container">
+          <h2>Sky<span>DO</span></h2>
+          <img src="vite.svg" alt="Logo" className="logo" />  
+        </div>
+        
         <button
           className="btn"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
-          {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+          {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
         </button>
       </header>
 

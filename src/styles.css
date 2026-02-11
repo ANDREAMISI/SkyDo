@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  transition: 0.3s ease;
+}
+body.light {
+  background-color: #f5f7fa;
+  color: #222;
+}
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+}
+.logo {
+  width: 40px;
+}
+.header h2 {
+  font-weight: bold;
+}
+.header h1 {
+  font-size: 18px;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.container h1 {
+  margin-bottom: 20px;
+}
+.container span {
+  color: #4f46e5;
+}
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #4f46e5;
+  color: white;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+.add-btn {
+  margin: 15px 0;
+  text-decoration: none;
+}
+.search-bar {
+  position: relative;
+  margin-bottom: 15px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 10px 35px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+body.dark .search-bar input {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: gray;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.task {
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+}
+body.dark .task {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+.task:hover {
+  transform: translateY(-2px);
+}
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.icon-btn.edit {
+  color: #4f46e5;
+}
+.icon-btn.delete {
+  color: #ef4444;
+}
+.icon-btn:hover {
+  opacity: 0.7;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+body.dark .input {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+}
+textarea.input {
+  resize: none;
+  min-height: 80px;
+}
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .container {
+    padding: 15px;
+  }
+}

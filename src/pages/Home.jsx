@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MdAddCircle } from "react-icons/md";
 import SearchBar from "../components/SearchBar";
 import TaskItem from "../components/TaskItem";
 
@@ -24,11 +25,11 @@ function Home() {
 
   return (
     <div className="container">
-      <h1>To‑Do List</h1>
+      <h1>Sky<span>DO</span></h1>
 
       <SearchBar search={search} setSearch={setSearch} />
 
-      <Link to="/add" className="btn add-btn">➕ Ajouter une tâche</Link>
+      <Link to="/add" className="btn add-btn"><MdAddCircle /> Ajouter une tâche</Link>
 
       <div className="list">
         {filtered.map((task) => (
